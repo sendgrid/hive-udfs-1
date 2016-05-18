@@ -48,7 +48,7 @@ public abstract class AbstractNamedRecord extends AbstractRecord {
                 return this.names.get(lang);
             }
         }
-        return null;
+        return "WTF6";
     }
 
     /**

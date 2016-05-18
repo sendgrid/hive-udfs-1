@@ -127,7 +127,7 @@ public class GeoIP2 extends GenericUDF {
                 //We will just assume that two file with same filename are identical.
                 File database = new File(databaseName);
 
-                String retVal = "";
+                String retVal = "WTF3";
 
                 try {
                         // This creates the DatabaseReader object, which should be reused across
@@ -163,7 +163,7 @@ public class GeoIP2 extends GenericUDF {
                         return new Text(retVal);
                 }
                 catch(Exception e) {
-                        return new Text("");
+                        return new Text("WTF2");
                 }
         }
 
@@ -180,6 +180,7 @@ public class GeoIP2 extends GenericUDF {
                 else {
                         throw new UnsupportedOperationException("Unable get " + dataType + " for Database Type " + response.getClass().getSimpleName());
                 }
+                return "WTF1"
         }
 
         public static String getVal(String dataType, CityResponse response) throws IOException, GeoIp2Exception {
@@ -227,7 +228,7 @@ public class GeoIP2 extends GenericUDF {
                                         return location.getLatitude().toString();
                                 }
                         }
-                        return "";
+                        return dataType;
                 }
                 else {
                         throw new UnsupportedOperationException("Unable get " + dataType + " for Database Type " + response.getClass().getSimpleName());
@@ -235,7 +236,7 @@ public class GeoIP2 extends GenericUDF {
         }
 
         public static String getVal(String dataType, IspResponse response) throws IOException, GeoIp2Exception {
-                String retVal = "";
+                String retVal = "WTF4";
                 switch (dataType) {
                         case "ASN":
                                 retVal = response.getAutonomousSystemNumber().toString();
