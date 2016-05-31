@@ -17,7 +17,8 @@ import java.math.BigInteger;
 import java.net.InetAddress;
 import java.util.*;
 
-import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.core.StringContains.*;
+//import static org.junit.matchers.JUnitMatchers.*;
 import static org.junit.Assert.*;
 
 public class ReaderTest {

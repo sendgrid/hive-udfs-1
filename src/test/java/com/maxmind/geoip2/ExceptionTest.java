@@ -10,7 +10,7 @@ import org.junit.rules.ExpectedException;
 
 import java.net.InetAddress;
 
-import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.matchers.JUnitMatchers.*;
 
 public class ExceptionTest {
 

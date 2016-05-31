@@ -9,6 +9,7 @@ import org.junit.Test;
 import java.net.InetAddress;
 import java.util.List;
 
+import static org.hamcrest.core.StringStartsWith.startsWith;
 import static org.junit.Assert.*;
 
 public class NullTest {
@@ -23,7 +24,7 @@ public class NullTest {
         InsightsResponse insights = this.client.insights(InetAddress
                 .getByName("1.2.3.13"));
 
-        assertThat(insights.toString(), CoreMatchers.startsWith("com.maxmind.geoip2.model.InsightsResponse [ {"));
+        assertThat(insights.toString(), startsWith("com.maxmind.geoip2.model.InsightsResponse [ {"));
 
         City city = insights.getCity();
         assertNotNull(city);

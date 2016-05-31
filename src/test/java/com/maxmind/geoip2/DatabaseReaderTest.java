@@ -18,7 +18,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.Arrays;
 
-import static org.hamcrest.CoreMatchers.containsString;
+import static org.junit.matchers.JUnitMatchers.*;
 import static org.junit.Assert.*;
 
 public class DatabaseReaderTest {
